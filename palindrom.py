@@ -1,5 +1,6 @@
 def palindrome(word):
+    word = word.lower()
     return word == word[::-1]
 
-print(palindrome("vov"))
-print(palindrome("kiro"))
+answer = input("Введите слово: ")
+print(palindrome(answer))
