@@ -21,13 +21,15 @@ class Stack:
 
 stack = Stack()
 
-for i in range(0, 6):
+for i in "Hello!":
     stack.push(i)
 
-print(stack.peek())
-print(stack.size())
+reverse = ""
 
-stack.push(1)
-item = stack.pop()
-print(item)
-print(stack.is_empty())
+for i in range(len(stack.items)):
+    reverse += stack.pop()
+
+print(reverse)
+          
+
+
