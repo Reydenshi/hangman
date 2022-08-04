@@ -3,14 +3,16 @@ import time
 
 def ss(number_list, n):
     found = False
+    start = time.time()
     for i in number_list:
         if i == n:
             found = True
             break
-    return found
+    end = time.time()
+    result = end - start
+    print("{} \n {} \n \n".format(found, result))
 
-numbers = range(0, 100)
-s1 = ss(numbers, 2)
-print(s1)
-s2 = ss(numbers, 2111)
-print(s2)
+numbers = range(0, 10000000000000000)
+ss(numbers, 2)
+ss(numbers, 211100000)
+
